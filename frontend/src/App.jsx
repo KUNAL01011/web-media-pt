@@ -1,12 +1,20 @@
 import { Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import LeftBar from "./components/LeftBar";
+import RightBar from "./components/RightBar";
 
 function App() {
   return (
-    <>
-      <h1>Header</h1>
-      <Outlet />
-      <h1>Footer</h1>
-    </>
+    <div className="bg-[#f6f3f3] dark:bg-[#333] ">
+      <Navbar />
+      <div className="flex">
+        <LeftBar />
+        <div className="flex-[6]">
+          <Outlet />
+        </div>
+        <RightBar />
+      </div>
+    </div>
   );
 }
 

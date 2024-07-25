@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.item {
+  -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+  -mox-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+}
+.post {
+  -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+  box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+  border-radius: 20px;
+}
+
+.h-Calc {
+  /* h-[calc(100vh - 70px)] */
+  height: calc(100vh - 75px);
+}
+/* $themes: (
+  light: (
+    textColor: #000,
+    bg: white,
+    logo: #00008b,
+    bgSoft: #f6f3f3,
+    textColorSoft: #555,
+    border: #d3d3d3,
+  ),
+  dark: (
+    textColor: #f5f5f5,
+    bg: #222,
+    logo: white,
+    bgSoft: #333,
+    textColorSoft: #d3d3d3,
+    border: #444,
+  ),
+); */

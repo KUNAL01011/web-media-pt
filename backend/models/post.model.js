@@ -9,18 +9,18 @@ const postSchema = Schema(
     postMedia: {
       type: String,
     },
-    postCreater: {
+    createdBy: {
       type: Schema.Types.ObjectId,
       ref: "User",
       required: true,
     },
-    postComment: [
+    commentBy: [
       {
         type: Schema.Types.ObjectId,
         ref: "Comment",
       },
     ],
-    postLikes: [
+    likedBy: [
       {
         type: Schema.Types.ObjectId,
         ref: "Like",

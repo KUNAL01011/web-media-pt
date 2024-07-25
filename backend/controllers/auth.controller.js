@@ -129,6 +129,7 @@ export const logout = asyncHandler(async (req, res) => {
 
 export const getMe = async (req, res) => {
 	try {
+    console.log(req.user.avatar);
 		const user = await User.findById(req.user._id).select("-password");
 		res.status(200).json(new ApiResponse(200,"User Authenticated",user));
 	} catch (error) {

@@ -2,7 +2,7 @@ import mongoose, { Schema } from "mongoose";
 
 const commentSchema = Schema(
   {
-    comment: {
+    commentMessage: {
       type: String,
     },
     commentPost: {
@@ -13,11 +13,13 @@ const commentSchema = Schema(
       type: Schema.Types.ObjectId,
       ref: "User",
     },
-    replay: {
-      type: Schema.Types.ObjectId,
-      ref: "Comment",
-      default: null,
-    },
+    reply: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Comment",
+        default: null,
+      },
+    ],
   },
   { timestamps: true }
 );

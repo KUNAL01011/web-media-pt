@@ -9,13 +9,14 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import Home from "./pages/home/Home.jsx";
-import Profile from "./pages/profile/Profile.jsx";
+// import Profile from "./pages/profile/Profile.jsx";
 import Login from "./pages/auth/Login.jsx";
 import Register from "./pages/auth/Register.jsx";
 import { Toaster } from "react-hot-toast";
 import Protected from "./utils/Protected.jsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import ProtectedAuth from "./utils/ProtectedAuth.jsx";
+import ProfilePage from "./pages/profile/Profile.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -32,12 +33,13 @@ const router = createBrowserRouter(
         <Route
           path="profile"
           element={
-            <Protected>
-              <Profile />
-            </Protected>
+            // <Protected>
+              <ProfilePage/>
+            // </Protected>
           }
         />
       </Route>
+      <Route path="/profile" element={<ProfilePage/>}/>
       <Route
         path="/login"
         element={
